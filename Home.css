@@ -1,0 +1,126 @@
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+  }
+  
+  .video-section {
+    position: relative; /* Ensure that the text overlay is positioned relative to this container */
+    flex: 1;
+    max-width: 70%;
+    height: 80vh;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .text-overlay {
+    position: absolute; /* Position text overlay on top of the video */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allow clicks to pass through to the video */
+  }
+  
+  .resizable-box {
+    position: absolute; /* Position each text box absolutely */
+    background-color: transparent;
+    pointer-events: auto; /* Enable interaction with the text box */
+  }
+  
+  .resizable-box.selected {
+    outline: 2px solid #007bff; /* Highlight selected text box */
+  }
+  
+  .text-box-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    position: relative;
+  }
+  
+  .delete-button {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .config-section {
+    width: 25%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .config-controls label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  .config-controls input,
+  .config-controls select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .config-controls input[type="color"] {
+    height: 40px;
+    padding: 2px;
+  }
+  
+  .config-controls input[type="number"] {
+    width: 60px;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
